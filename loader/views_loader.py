@@ -8,8 +8,6 @@ POST_PATH = "posts.json"
 loader_blueprint = Blueprint("loader_blueprint", __name__, template_folder="templates")
 logging.basicConfig(filename="basic.log", level=logging.INFO)
 
-# создаем вьюшки из блюпринт на разные страницы
-
 
 # страница, куда можно прикреплять файл рисунка с текстовым полем
 @loader_blueprint.route("/post")

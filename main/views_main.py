@@ -8,7 +8,6 @@ main_blueprint = Blueprint("main_blueprint", __name__, template_folder="template
 logging.basicConfig(filename="basic.log", level=logging.INFO)
 
 
-# создаем вьюшки из блюпринт на разные страницы
 @main_blueprint.route("/")
 def page_index():
     logging.info("Запрошена главная страница")

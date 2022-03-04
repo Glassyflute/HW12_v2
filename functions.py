@@ -67,4 +67,3 @@ class PostsManager:
         except DataWriteError:
             print("Данные не были перезаписаны в файл json")
 
-
