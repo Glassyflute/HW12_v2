@@ -1,0 +1,55 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:root:Запрошена главная страница
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Поиск выполняется
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:24] "GET /list?s=тром HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Запрошена главная страница
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Поиск выполняется
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:14:31] "GET /list?s=ФФФласк HTTP/1.1" 200 -
+INFO:root:Поиск выполняется
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:06] "GET /list?s=ФФФласк HTTP/1.1" 200 -
+INFO:root:Запрошена страница для добавления поста
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:09] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные поста вносятся пользователем
+INFO:root:Загруженный файл не картинка
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:18] "POST /post HTTP/1.1" 200 -
+INFO:root:Запрошена страница для добавления поста
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:19] "GET /post HTTP/1.1" 200 -
+INFO:root:Данные поста вносятся пользователем
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:41] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:41] "GET /uploads/images/134971-aleni.jpg HTTP/1.1" 200 -
+INFO:root:Запрошена главная страница
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:15:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Запрошена страница для добавления поста
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:16:29] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:16:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные поста вносятся пользователем
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\pythonProject\HW12\HW12_fromclone\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\pythonProject\HW12\HW12_fromclone\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\pythonProject\HW12\HW12_fromclone\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\pythonProject\HW12\HW12_fromclone\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\pythonProject\HW12\HW12_fromclone\loader\views_loader.py", line 27, in page_post_upload
+    picture.save(f"./uploads/images/{picture.filename}")
+  File "C:\pythonProject\HW12\HW12_fromclone\venv\lib\site-packages\werkzeug\datastructures.py", line 3021, in save
+    dst = open(dst, "wb")
+PermissionError: [Errno 13] Permission denied: './uploads/images/'
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:16:40] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:root:Данные поста вносятся пользователем
+ERROR:root:Ошибка загрузки: файл или картинка не загружены
+NoneType: None
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:16:56] "POST /post HTTP/1.1" 200 -
+INFO:root:Запрошена страница для добавления поста
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 20:16:58] "GET /post HTTP/1.1" 200 -
